@@ -1,0 +1,45 @@
+﻿@section scripts{
+    <script src="@BundleTable.Bundles.ResolveBundleUrl("~/bundles/kademlia")"></script>
+}
+
+@section styles{
+    <link href="@BundleTable.Bundles.ResolveBundleUrl("~/Content/kademlia")" rel="stylesheet" />
+}
+
+<div class="jumbotron">
+    <h1>Kademlia Debug Interface</h1>
+    <p class="lead">View information about Kademlia nodes running on this machine.</p>
+</div>
+
+<div class="row" id="kademlia">
+
+    <div class="panel-group" id="accordion">
+
+        <div class="panel panel-default" data-bind="foreach: reports">
+            <div class="panel-heading" data-bind="css: status">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" data-bind="text: header, attr: { href: '#' + id() }">
+                    </a>
+                </h4>
+            </div>
+            <div class="panel-collapse collapse in" data-bind="attr: { id: id }">
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: entries">
+                            <tr>
+                                <td data-bind="text: description"></td>
+                                <td data-bind="text: value"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

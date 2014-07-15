@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5B2D49A-312C-4925-8C53-099426AF83FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSOK.Kademlia</RootNamespace>
+    <AssemblyName>PSOK.Kademlia</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PSOK.Kademlia.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BootstrapperNode.cs" />
+    <Compile Include="IBucket.cs" />
+    <Compile Include="IBucketContainer.cs" />
+    <Compile Include="IContact.cs" />
+    <Compile Include="IDht.cs" />
+    <Compile Include="INodeDht.cs" />
+    <Compile Include="Reports\IDhtStatus.cs" />
+    <Compile Include="IItem.cs" />
+    <Compile Include="Reports\IItemStatus.cs" />
+    <Compile Include="IKademlia.cs" />
+    <Compile Include="INode.cs" />
+    <Compile Include="Reports\INodeStatus.cs" />
+    <Compile Include="Lookups\IResult.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="KeyProvider.cs" />
+    <Compile Include="Lookups\StrictLookup.cs" />
+    <Compile Include="Lookups\LookupBase.cs" />
+    <Compile Include="Bucket.cs" />
+    <Compile Include="BucketContainer.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="NodeDht.cs" />
+    <Compile Include="Exceptions\LookupException.cs" />
+    <Compile Include="Lookups\LookupFactory.cs" />
+    <Compile Include="Lookups\LooseLookup.cs" />
+    <Compile Include="Lookups\Parallelism.cs" />
+    <Compile Include="Lookups\Result.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Services\Binding.cs" />
+    <Compile Include="Services\NodeServiceHost.cs" />
+    <Compile Include="Reports\ItemStatus.cs" />
+    <Compile Include="Reports\DhtStatus.cs" />
+    <Compile Include="Reports\NodeStatus.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\Integrity.cs" />
+    <Compile Include="Tasks\RefreshBuckets.cs" />
+    <Compile Include="Tasks\Replicate.cs" />
+    <Compile Include="Tasks\Republish.cs" />
+    <Compile Include="Services\NodeProxy.cs" />
+    <Compile Include="Services\Behavior.cs" />
+    <Compile Include="Services\MessageInspector.cs" />
+    <Compile Include="Services\Header.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kernel\Kernel.csproj">
+      <Project>{51bf5e1d-d801-45ec-85bf-2d69634a0241}</Project>
+      <Name>Kernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

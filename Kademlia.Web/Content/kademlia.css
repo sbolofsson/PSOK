@@ -1,0 +1,9 @@
+﻿.running {
+    background-color: #41A128 !important;
+}
+.down {
+    background-color: #FF4040 !important;
+}
+.partiallyrunning {
+    background-color: #FFF740 !important;
+}

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC264EFD-C08E-4BA5-9BD8-1823BB1020EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSOK.PublishSubscribe</RootNamespace>
+    <AssemblyName>PSOK.PublishSubscribe</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PSOK.PublishSubscribe.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.6.0\lib\net40\Microsoft.Data.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.EntityFrameworkProvider">
+      <HintPath>..\packages\Microsoft.OData.EntityFrameworkProvider.1.0.0-alpha2\lib\net40\Microsoft.OData.EntityFrameworkProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IBroker.cs" />
+    <Compile Include="Reports\IBrokerStatus.cs" />
+    <Compile Include="Services\IDataContext.cs" />
+    <Compile Include="Services\IDebugServiceHost.cs" />
+    <Compile Include="IHeaders.cs" />
+    <Compile Include="IPeer.cs" />
+    <Compile Include="Services\IPeerServiceHost.cs" />
+    <Compile Include="IPublish.cs" />
+    <Compile Include="ISerializableSubscription.cs" />
+    <Compile Include="Reports\IStatusReport.cs" />
+    <Compile Include="Reports\IStatusReportEntry.cs" />
+    <Compile Include="ISubscription.cs" />
+    <Compile Include="Reports\ISubscriptionStatus.cs" />
+    <Compile Include="Peer.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Exceptions\PubSubContextException.cs" />
+    <Compile Include="Pipelines\Callback\SynchronousCallback.cs" />
+    <Compile Include="Pipelines\Shutdown\Dispose.cs" />
+    <Compile Include="Reports\SubscriptionStatus.cs" />
+    <Compile Include="SerializableSubscription.cs" />
+    <Compile Include="Services\PeerServiceHost.cs" />
+    <Compile Include="Reports\BrokerStatus.cs" />
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\DataServiceBase.cs" />
+    <Compile Include="Services\DataServiceHost.cs" />
+    <Compile Include="Services\DebugServiceHost.cs" />
+    <Compile Include="Events\CallbackEvent.cs" />
+    <Compile Include="Events\PublishEvent.cs" />
+    <Compile Include="Events\SubscribeEvent.cs" />
+    <Compile Include="Exceptions\DataContextException.cs" />
+    <Compile Include="Headers.cs" />
+    <Compile Include="Pipelines\PubSubContext.cs" />
+    <Compile Include="Broker.cs" />
+    <Compile Include="Pipelines\CallbackArgs.cs" />
+    <Compile Include="Pipelines\Callback\CacheMessage.cs" />
+    <Compile Include="Pipelines\Callback\CreateContext.cs" />
+    <Compile Include="Pipelines\Callback\DisposeContext.cs" />
+    <Compile Include="Pipelines\Callback\InvokeCallback.cs" />
+    <Compile Include="Pipelines\PubSubArgs.cs" />
+    <Compile Include="Pipelines\PublishArgs.cs" />
+    <Compile Include="Pipelines\Publish\DetectRequestResponse.cs" />
+    <Compile Include="Pipelines\Publish\FindSubscriptions.cs" />
+    <Compile Include="Pipelines\Publish\PublishMessage.cs" />
+    <Compile Include="Pipelines\SubscribeArgs.cs" />
+    <Compile Include="Pipelines\Subscribe\StoreSubscription.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publish.cs" />
+    <Compile Include="Reports\StatusReport.cs" />
+    <Compile Include="Reports\StatusReportEntry.cs" />
+    <Compile Include="Subscription.cs" />
+    <Compile Include="Tasks\CheckStatusReports.cs" />
+    <Compile Include="Tasks\KeepAlive.cs" />
+    <Compile Include="Tasks\Republish.cs" />
+    <Compile Include="Tasks\StatusReport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PublishSubscribe.Messages\PublishSubscribe.Messages.csproj">
+      <Project>{7c10e504-5edc-4037-8a28-b766a665daaa}</Project>
+      <Name>PublishSubscribe.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kademlia\Kademlia.csproj">
+      <Project>{C5B2D49A-312C-4925-8C53-099426AF83FD}</Project>
+      <Name>Kademlia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kernel\Kernel.csproj">
+      <Project>{51BF5E1D-D801-45EC-85BF-2D69634A0241}</Project>
+      <Name>Kernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config.uninstall.xdt" />
+    <None Include="Web.config.install.xdt">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config.install.xdt" />
+    <None Include="PublishSubscribe.csproj.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.config.uninstall.xdt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

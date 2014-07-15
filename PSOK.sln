@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{267394C2-F6AF-442A-9E57-8F0919DE9D2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kademlia", "Kademlia\Kademlia.csproj", "{C5B2D49A-312C-4925-8C53-099426AF83FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublishSubscribe", "PublishSubscribe\PublishSubscribe.csproj", "{BC264EFD-C08E-4BA5-9BD8-1823BB1020EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kademlia.Bootstrapper", "Kademlia.Bootstrapper\Kademlia.Bootstrapper.csproj", "{F924DE96-82A7-4D69-968B-BE8E91FB356C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublishSubscribe.Messages", "PublishSubscribe.Messages\PublishSubscribe.Messages.csproj", "{7C10E504-5EDC-4037-8A28-B766A665DAAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B7A7C83-E283-487C-8E3B-A3747AC3443A}"
+	ProjectSection(SolutionItems) = preProject
+		Deployment\Scripts\getopts.bat = Deployment\Scripts\getopts.bat
+		Deployment\Scripts\getstamp.bat = Deployment\Scripts\getstamp.bat
+		Deployment\Scripts\install.bat = Deployment\Scripts\install.bat
+		Deployment\Scripts\package-and-reinstall.bat = Deployment\Scripts\package-and-reinstall.bat
+		Deployment\Scripts\package.bat = Deployment\Scripts\package.bat
+		Deployment\Scripts\reinstall.bat = Deployment\Scripts\reinstall.bat
+		Deployment\Scripts\uninstall.bat = Deployment\Scripts\uninstall.bat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kernel", "Kernel\Kernel.csproj", "{51BF5E1D-D801-45EC-85BF-2D69634A0241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kademlia.Web", "Kademlia.Web\Kademlia.Web.csproj", "{3B6B99D2-4704-40E7-B558-83B6A7F165E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{DC234C39-C47D-448B-B6A5-7CE0FF77D564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5B684517-90EC-43B4-8DDA-95D671AC7DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterLinq", "InterLinq\InterLinq.csproj", "{675F3E10-B4EA-4254-A068-107AAF02D093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{267394C2-F6AF-442A-9E57-8F0919DE9D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267394C2-F6AF-442A-9E57-8F0919DE9D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267394C2-F6AF-442A-9E57-8F0919DE9D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267394C2-F6AF-442A-9E57-8F0919DE9D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B2D49A-312C-4925-8C53-099426AF83FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B2D49A-312C-4925-8C53-099426AF83FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B2D49A-312C-4925-8C53-099426AF83FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B2D49A-312C-4925-8C53-099426AF83FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC264EFD-C08E-4BA5-9BD8-1823BB1020EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC264EFD-C08E-4BA5-9BD8-1823BB1020EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC264EFD-C08E-4BA5-9BD8-1823BB1020EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC264EFD-C08E-4BA5-9BD8-1823BB1020EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F924DE96-82A7-4D69-968B-BE8E91FB356C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F924DE96-82A7-4D69-968B-BE8E91FB356C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F924DE96-82A7-4D69-968B-BE8E91FB356C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F924DE96-82A7-4D69-968B-BE8E91FB356C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C10E504-5EDC-4037-8A28-B766A665DAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C10E504-5EDC-4037-8A28-B766A665DAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C10E504-5EDC-4037-8A28-B766A665DAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C10E504-5EDC-4037-8A28-B766A665DAAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51BF5E1D-D801-45EC-85BF-2D69634A0241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BF5E1D-D801-45EC-85BF-2D69634A0241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BF5E1D-D801-45EC-85BF-2D69634A0241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BF5E1D-D801-45EC-85BF-2D69634A0241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6B99D2-4704-40E7-B558-83B6A7F165E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6B99D2-4704-40E7-B558-83B6A7F165E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6B99D2-4704-40E7-B558-83B6A7F165E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6B99D2-4704-40E7-B558-83B6A7F165E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC234C39-C47D-448B-B6A5-7CE0FF77D564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC234C39-C47D-448B-B6A5-7CE0FF77D564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC234C39-C47D-448B-B6A5-7CE0FF77D564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC234C39-C47D-448B-B6A5-7CE0FF77D564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B684517-90EC-43B4-8DDA-95D671AC7DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B684517-90EC-43B4-8DDA-95D671AC7DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B684517-90EC-43B4-8DDA-95D671AC7DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B684517-90EC-43B4-8DDA-95D671AC7DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675F3E10-B4EA-4254-A068-107AAF02D093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675F3E10-B4EA-4254-A068-107AAF02D093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675F3E10-B4EA-4254-A068-107AAF02D093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675F3E10-B4EA-4254-A068-107AAF02D093}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
